@@ -11,14 +11,16 @@ requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
 authors = [{name = "Jeremy Howard", email = "github@jhoward.fastmail.fm"}]
 classifiers = [
+  "Operating System :: MacOS :: MacOS X",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
 ]
 
-dependencies = []
+dependencies = ["appscript", "pyobjc-framework-Quartz"]
 
 [project.optional-dependencies]
 dev = [
+  "pytest",
   "fastship",
   "build",
   "twine",
@@ -32,3 +34,6 @@ version = { attr = "macscript.__version__" }
 
 [tool.setuptools.packages.find]
 include = ["macscript"]
+
+[tool.setuptools.package-data]
+macscript = ["word.sdef"]

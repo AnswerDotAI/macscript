@@ -1,6 +1,7 @@
 meta/
 links/
 __pycache__/
+.pytest_cache/
 *.py[cod]
 *.so
 *.egg-info/
